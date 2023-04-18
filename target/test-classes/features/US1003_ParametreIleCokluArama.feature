@@ -1,4 +1,4 @@
-@wip
+
 Feature: Us1003 Kullanici parametre olarak girilen degerleri aratir
 
 

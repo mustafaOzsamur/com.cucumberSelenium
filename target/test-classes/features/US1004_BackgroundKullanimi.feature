@@ -1,5 +1,5 @@
 
-@wip
+
 Feature: US1004 Kullanici bastaki ortak adimlar icin Background kullanir
 
   Background: Tum scenario'lar icin ortak ilk adim
@@ -20,6 +20,7 @@ Feature: US1004 Kullanici bastaki ortak adimlar icin Background kullanir
 
     Then amazon arama kutusuna "Java" Yazip aratir
     And arama sonuclarinin "Java" icerdigini test eder
+    And 5 saniye bekler
     And sayfayi kapatir
 
 
