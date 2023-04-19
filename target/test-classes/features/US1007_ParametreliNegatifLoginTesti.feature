@@ -1,4 +1,4 @@
-
+@smoke
 Feature: US1007 Kullanici yanlis bilgilerle giris yapamaz
   Scenario: TC10 Gecerli Kullanici adi ve Gecersiz sifre ile negatif login testi
 

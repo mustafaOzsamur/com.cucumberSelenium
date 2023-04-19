@@ -1,6 +1,6 @@
 
 Feature: US1006 Kullanici configuration dosyasindaki bilgilerle login olabilmeli
-  @wip
+  @wip @smoke
   Scenario: TC09 Gecerli Kullanici adi ve sifre ile Pozitif login testi
     
     Given kullanici "qdUrl" anasayfaya gider
