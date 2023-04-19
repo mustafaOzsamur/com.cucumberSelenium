@@ -37,4 +37,14 @@ public class QualitydemyStepdefinitions {
     public void basariliGirisYapilamadiginiTestEder() {
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
     }
+
+    @And("kullanici kutusuna manuel olarak {string} yazar")
+    public void kullaniciKutusunaManuelOlarakYazar(String UserName) {
+        qualitydemyPage.kullaniciEmailKutusu.sendKeys(UserName);
+    }
+
+    @And("password kutusuna manuel olarak {string} yazar")
+    public void passwordKutusunaManuelOlarakYazar(String Password) {
+        qualitydemyPage.kullaniciPasswordKutusu.sendKeys(Password);
+    }
 }
