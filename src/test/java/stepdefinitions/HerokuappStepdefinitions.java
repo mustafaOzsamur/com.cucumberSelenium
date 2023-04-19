@@ -2,9 +2,8 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.NoSuchElementException;
 import pages.HerokuappPage;
-
-import java.util.NoSuchElementException;
 
 public class HerokuappStepdefinitions {
     HerokuappPage herokuappPage=new HerokuappPage();
@@ -34,7 +33,7 @@ public class HerokuappStepdefinitions {
         try {
             herokuappPage.deleteButonu.click();
             Assert.assertFalse(flag==3);
-        } catch (Exception e) {
+        } catch (NoSuchElementException e) {
             Assert.assertTrue(flag==3);
         }
     }

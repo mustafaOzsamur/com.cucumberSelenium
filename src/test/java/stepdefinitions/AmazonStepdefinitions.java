@@ -93,5 +93,10 @@ public class AmazonStepdefinitions {
 
         Assert.assertTrue(actualUrl.contains(arananKelime));
     }
+
+    @And("sacilan tüm sayfalari kapatir")
+    public void sacilanTumSayfalariKapatir() {
+        Driver.quitDriver();
+    }
 }
 
