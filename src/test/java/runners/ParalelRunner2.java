@@ -6,16 +6,16 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-     plugin={"html:target/cucumber-reports.html",
-                "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml"
+     plugin={"html:target/cucumber-reports-p2.html",
+                "json:target/json-reports/cucumberp2.json",
+                "junit:target/xml-report/cucumberp2.xml"
      },
      features = "src/test/resources/features" ,
      glue = "stepdefinitions" ,
-     tags = "@wip",
+     tags = "@p2",
      dryRun = false
 )
-public class Runner {
+public class ParalelRunner2 {
     /*
     Cucumber'da Runner class'i bos bir class'tir
     Runner class'ini diger class'lardan farkli kilan ve TestNG'deki
