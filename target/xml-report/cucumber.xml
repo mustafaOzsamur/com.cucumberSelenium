@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="5.97" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US1013 Kullanici web tablosundan istedigi degerin varligini test eder" name="TC18 Kullanici tablodan deger test edebilmeli" time="5.802">
-<failure type="java.lang.AssertionError">
-<![CDATA[java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.Guru99Stepdefinitions.in_listede_oldugunu_test_eder(Guru99Stepdefinitions.java:27)
-	at ✽."Blue Dart Expres" in listede oldugunu test eder(file:///C:/Users/musta/IdeaProjects/com.cucumberSelenium/src/test/resources/features/US1013_guru99.feature:8)
-]]>
-</failure>
+<testsuite name="Cucumber" time="12.659" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US1016 aranan urunun ortalama fiyatini test etme" name="TC21 aranan urunun ortalama fiyati test edilebilmeli" time="12.492">
 <system-out><![CDATA[
-Given kullanici "guru99Url" anasayfaya gider................................passed
-And guru99 cookies kabul eder...............................................passed
-Then Company listesini concola yazdirir.....................................passed
-And "Blue Dart Expres" in listede oldugunu test eder........................failed
+Given kullanici "amazonUrl" anasayfaya gider................................passed
+Then amazon arama kutusuna "Nutella" Yazip aratir...........................passed
+And cikan urunlerden "Nutella" kelimesi icerenlerin fiyat ortalamasinin 10 Euro altinda oldugunu test eder.passed
 ]]></system-out>
 </testcase>
 </testsuite>

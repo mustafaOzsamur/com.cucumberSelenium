@@ -5,9 +5,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.util.List;
 
 public class AmazonStepdefinitions {
     AmazonPage amazonPage=new AmazonPage();
@@ -91,12 +95,57 @@ public class AmazonStepdefinitions {
     public void urlDeOldugunuTestEder(String arananKelime) {
         String actualUrl=Driver.driver.getCurrentUrl();
 
-        Assert.assertTrue(actualUrl.contains(arananKelime));
+      Assert.assertTrue(actualUrl.contains(arananKelime));
+
     }
 
     @And("sacilan tüm sayfalari kapatir")
     public void sacilanTumSayfalariKapatir() {
         Driver.quitDriver();
+    }
+
+    @And("cikan urunler icinde {string}oldugunu test eder")
+    public void cikanUrunlerIcindeOldugunuTestEder(String arananUrun) {
+
+        List<WebElement> sonucUrunElementleriList=amazonPage.sonucUrunIsimElementleriList;
+
+        List<String>sonucUrunIsimleriListStr= ReusableMethods.getElementsText(sonucUrunElementleriList);
+
+     //   Assert.assertTrue(sonucUrunIsimleriListStr.contains(arananUrun));
+
+        boolean iceriyorMu=false;
+
+
+   //           1.Yöntem
+  //      for (String each:sonucUrunIsimleriListStr
+  //           ) {
+  //          if (each.contains(arananUrun)) {
+  //              iceriyorMu=true;
+  //              break;
+  //          }
+  //      }
+  //      Assert.assertTrue(iceriyorMu);
+
+
+        // 2.yöntem
+        for (WebElement each:sonucUrunElementleriList
+             ) {
+            if (each.getText().contains(arananUrun)){
+                iceriyorMu=true;
+            }
+        }
+
+        Assert.assertTrue(iceriyorMu);
+    }
+
+    @And("cikan urunlerden {string} kelimesi icerenlerin fiyat ortalamasinin {int} Euro altinda oldugunu test eder")
+    public void cikanUrunlerdenKelimesiIcerenlerinFiyatOrtalamasininEuroAltindaOldugunuTestEder(String arananUrun, int ortalamaFiyat) {
+        List<WebElement> aramaSonucDetayliIsimElementleriList=amazonPage.aramaSonucDetayliIsimElementleriList;
+
+        for (WebElement each:aramaSonucDetayliIsimElementleriList
+             ) {
+            System.out.println(each.getText());
+        }
     }
 }
 
