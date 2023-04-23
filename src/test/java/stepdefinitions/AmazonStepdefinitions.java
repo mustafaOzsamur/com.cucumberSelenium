@@ -142,10 +142,29 @@ public class AmazonStepdefinitions {
     public void cikanUrunlerdenKelimesiIcerenlerinFiyatOrtalamasininEuroAltindaOldugunuTestEder(String arananUrun, int ortalamaFiyat) {
         List<WebElement> aramaSonucDetayliIsimElementleriList=amazonPage.aramaSonucDetayliIsimElementleriList;
 
+        int siraNo=1;
+        int toplamFiyat=0;
         for (WebElement each:aramaSonucDetayliIsimElementleriList
              ) {
-            System.out.println(each.getText());
+
+            String urunFiyatiStr=each.getText();
+            urunFiyatiStr=urunFiyatiStr.replaceAll("\\D","");
+            System.out.println(siraNo+" ---- " + urunFiyatiStr);
+            siraNo++;
+
+            Integer urunfiyatiInt=Integer.parseInt(urunFiyatiStr);
+            toplamFiyat+=urunfiyatiInt;
+
         }
+
+        double actualortalamaFiyat= (double) toplamFiyat/(siraNo*100);
+
+        System.out.println(actualortalamaFiyat);
+
+        Assert.assertTrue(actualortalamaFiyat<ortalamaFiyat);
+
+
+
     }
 }
 
