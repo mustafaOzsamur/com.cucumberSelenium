@@ -30,4 +30,12 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//b[text()='Account Created!']")
     public WebElement accountCreatedYaziElementi;
 
+   @FindBy(xpath = "//div[@class='logo pull-left']")
+    public WebElement anasayfaDogrulamaLogosu;
+
+   @FindBy(xpath = "//h2[text()='Subscription']")
+    public WebElement abonelikYaziElementi;
+
+   @FindBy(xpath = "(//h2[text()='Full-Fledged practice website for Automation Engineers'])[1]")
+    public WebElement sayfaBasiYazielementi;
 }

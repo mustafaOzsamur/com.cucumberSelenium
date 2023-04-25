@@ -4,11 +4,15 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 import pages.AutomationExercisePage;
 import utilities.Driver;
+
+import static utilities.Driver.driver;
 
 public class AutomationExerciseStepdefinitions {
     String kullaniciEmail;
@@ -82,6 +86,33 @@ public class AutomationExerciseStepdefinitions {
         softAssert.assertTrue(automationExercisePage.accountCreatedYaziElementi.isDisplayed());
 
 
+    }
+
+    @Then("Ana sayfanin basariyla gorundugunu dogrulalar")
+    public void ana_sayfanin_basariyla_gorundugunu_dogrulalar() {
+        Assert.assertTrue(automationExercisePage.anasayfaDogrulamaLogosu.isDisplayed());
+    }
+    @Then("Sayfayi asagiya dogru kaydirin")
+    public void sayfayi_asagiya_dogru_kaydirin() {
+
+
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
+
+    }
+    @Then("ABONELİK in gorunur oldugunu dogrulayin")
+    public void aboneli̇k_in_gorunur_oldugunu_dogrulayin() {
+        Assert.assertTrue(automationExercisePage.abonelikYaziElementi.isDisplayed());
+
+    }
+    @Then("Sayfayi yukari kaydir")
+    public void sayfayi_yukari_kaydir() {
+
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.HOME).perform();
+    }
+    @Then("Sayfanin yukari kaydirildigini ve Otomasyon Muhendisleri icin Tam Tesekkullu uygulama web sitesi metninin ekranda gorundugunu dogrulayin")
+    public void sayfanin_yukari_kaydirildigini_ve_otomasyon_muhendisleri_icin_tam_tesekkullu_uygulama_web_sitesi_metninin_ekranda_gorundugunu_dogrulayin() {
+
+        Assert.assertTrue(automationExercisePage.sayfaBasiYazielementi.isDisplayed());
     }
 
 

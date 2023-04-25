@@ -17,7 +17,7 @@ Faker faker=new Faker();
 String ilkSayfaWHD;
     @Then("Login Portal elementine kadar asagiya iner")
     public void login_portal_elementine_kadar_asagiya_iner() {
-        Actions actions=new Actions(Driver.driver);
+        Actions actions=new Actions(Driver.getDriver());
         actions.moveToElement(webUniversityPage.loginPortalElementi).build().perform();
     }
     @Then("Login Portal a tiklar")

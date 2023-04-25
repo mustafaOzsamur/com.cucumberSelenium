@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="11.709" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="web sayfasi icerisinde kodlarla sayfayi asagi ve yukari kaydirma testi" name="Kullanici web sayfasi icerisinde kodlarla sayfayi asagi ve yukari kaydirma yapabilmeli" time="11.528">
+<system-out><![CDATA[
+Given kullanici "automationUrl" anasayfaya gider............................passed
+Then Ana sayfanin basariyla gorundugunu dogrulalar..........................passed
+And Sayfayi asagiya dogru kaydirin..........................................passed
+Then ABONELİK in gorunur oldugunu dogrulayin................................passed
+And Sayfayi yukari kaydir...................................................passed
+Then Sayfanin yukari kaydirildigini ve Otomasyon Muhendisleri icin Tam Tesekkullu uygulama web sitesi metninin ekranda gorundugunu dogrulayin.passed
+]]></system-out>
+</testcase>
+</testsuite>
