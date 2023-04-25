@@ -1,5 +1,5 @@
 Feature: US1014 Automation exercise sitesinde kullanci olusturun
-
+@p2
   Scenario: TC19 Kullanici automation exercise sayfasinda kullanici olusturabilmeli
     
     Given kullanici "automationUrl" anasayfaya gider
