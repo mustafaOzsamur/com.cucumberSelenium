@@ -15,6 +15,8 @@ import pages.AutomationExercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.time.Duration;
+
 import static utilities.Driver.driver;
 
 public class AutomationExerciseStepdefinitions {
@@ -157,11 +159,19 @@ public class AutomationExerciseStepdefinitions {
       //  JavascriptExecutor executor = (JavascriptExecutor)Driver.getDriver();
       //  executor.executeScript("arguments[0].click();", element);
 
-        Driver.getDriver().switchTo().alert().dismiss();
+      //  Driver.getDriver().switchTo().alert().dismiss();
+
+
 
     }
     @Then("odeme ayrintilarini girin")
     public void odeme_ayrintilarini_girin() {
+     //   Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.id("ad_iframe")));
+     //   Driver.getDriver().findElement(By.id("dismiss-button")).click();
+     //   Driver.getDriver().switchTo().defaultContent();
+
+        driver.switchTo().defaultContent();
+
         actions.click(automationExercisePage.cardNameElementi).sendKeys("mustafa yilmaz")
                 .sendKeys(Keys.TAB)
                 .sendKeys("8568658685875")

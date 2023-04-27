@@ -1,5 +1,5 @@
 Feature: US1018  Web sayfasinda siparis ve odeme tesi
-@wip
+
   Scenario: TC23 Kullanici web sayfasindan siparis verebilmeli ve odeyebilmeli
     Given kullanici "automationUrl" anasayfaya gider
     Then Ana sayfanin basariyla gorundugunu dogrulalar

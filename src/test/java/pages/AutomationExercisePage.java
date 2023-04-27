@@ -78,10 +78,10 @@ public class AutomationExercisePage {
     @FindBy(xpath = "(//div[@class='alert-success alert'])[1]")
     public WebElement yourOrderHasBeenPlacedSuccessfullyYaziElementi;
 
-    @FindBy(xpath = "//iframe[@title='Advertisement']")
+    @FindBy(id = "ad_iframe")
     public WebElement iframeReklamElementi;
 
-    @FindBy(xpath = "//span[text()='Close']")
+    @FindBy(id = "dismiss-button")
     public WebElement closeReklamElementi;
 
 }

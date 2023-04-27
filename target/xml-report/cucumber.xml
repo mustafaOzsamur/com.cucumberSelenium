@@ -1,57 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="20.728" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US1018  Web sayfasinda siparis ve odeme tesi" name="TC23 Kullanici web sayfasindan siparis verebilmeli ve odeyebilmeli" time="20.536">
-<failure type="org.openqa.selenium.NoAlertPresentException" message="no such alert
-  (Session info: chrome=112.0.5615.138)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [197c3c973f5e1e3c62aaf8a3d0e44588, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\musta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63164/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 197c3c973f5e1e3c62aaf8a3d0e44588">
-<![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=112.0.5615.138)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [197c3c973f5e1e3c62aaf8a3d0e44588, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\musta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63164/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 197c3c973f5e1e3c62aaf8a3d0e44588
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1079)
-	at stepdefinitions.AutomationExerciseStepdefinitions.aciklama_metin_alanina_aciklamayi_girin_ve_place_order_tiklayin(AutomationExerciseStepdefinitions.java:160)
-	at ✽.aciklama metin alanina aciklamayi girin ve Place Order tiklayin(file:///C:/Users/musta/IdeaProjects/com.cucumberSelenium/src/test/resources/features/US1018_SiparisVeÖdemeTesti.feature:13)
-]]>
-</failure>
+<testsuite name="Cucumber" time="40.24" tests="7" skipped="0" failures="0" errors="0">
+<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.1" time="8.086">
 <system-out><![CDATA[
-Given kullanici "automationUrl" anasayfaya gider............................passed
-Then Ana sayfanin basariyla gorundugunu dogrulalar..........................passed
-And user sig in linkine tiklar..............................................passed
-And dogru email ve password girerek login butonuna tikla....................passed
-And sepete urun ekle........................................................passed
-And cart butonuna click yap.................................................passed
-Then cart sayfasinda urununun eklendigini dogrula...........................passed
-And proceed To Checkout click yap...........................................passed
-And adres ayrintilarini dogrula ve siparisi incele..........................passed
-Then aciklama metin alanina aciklamayi girin ve Place Order tiklayin........failed
-And odeme ayrintilarini girin...............................................skipped
-And pay and Confirm Order click yap.........................................skipped
-Then your order has been placed successfully! yazisinin gorundugunu dogrulayin.skipped
-And delete Account butonuna click yapin.....................................skipped
-And ACCOUNT DELETED yazisinin göründügünü dogrulayin........................skipped
-Then continue butonuna click yap............................................skipped
+Given kullanici "editorUrl" anasayfaya gider................................passed
+And kullanici new butonuna basar............................................passed
+And first name kutusuna "ilker" yazar.......................................passed
+And last name kutusune "Bulut" yazar........................................passed
+And position kutusuna "QA" yazar............................................passed
+And office kutusuna "Istanbul" yazar........................................passed
+And extension kutusuna "Levennt" yazar......................................passed
+Then start date kutusuna "2021-01-01" yazar.................................passed
+And salary kutusuna "20000" yazar...........................................passed
+And create butonuna basar...................................................passed
+Then kullanici "ilker" ile arama yapar......................................passed
+And isim bolumunde "ilker" oldugunu dogrular................................passed
+Then 2 saniye bekler........................................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.2" time="5.217">
+<system-out><![CDATA[
+Given kullanici "editorUrl" anasayfaya gider................................passed
+And kullanici new butonuna basar............................................passed
+And first name kutusuna "Ahmet" yazar.......................................passed
+And last name kutusune "Yilmaz" yazar.......................................passed
+And position kutusuna "Developer" yazar.....................................passed
+And office kutusuna "Ankara" yazar..........................................passed
+And extension kutusuna "Cukur" yazar........................................passed
+Then start date kutusuna "2022-02-05" yazar.................................passed
+And salary kutusuna "40000" yazar...........................................passed
+And create butonuna basar...................................................passed
+Then kullanici "Ahmet" ile arama yapar......................................passed
+And isim bolumunde "Ahmet" oldugunu dogrular................................passed
+Then 2 saniye bekler........................................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.3" time="5.253">
+<system-out><![CDATA[
+Given kullanici "editorUrl" anasayfaya gider................................passed
+And kullanici new butonuna basar............................................passed
+And first name kutusuna "Hakan" yazar.......................................passed
+And last name kutusune "Uyanik" yazar.......................................passed
+And position kutusuna "Tester" yazar........................................passed
+And office kutusuna "Izmir" yazar...........................................passed
+And extension kutusuna "Karsi" yazar........................................passed
+Then start date kutusuna "2020-05-02" yazar.................................passed
+And salary kutusuna "50000" yazar...........................................passed
+And create butonuna basar...................................................passed
+Then kullanici "Hakan" ile arama yapar......................................passed
+And isim bolumunde "Hakan" oldugunu dogrular................................passed
+Then 2 saniye bekler........................................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.4" time="5.368">
+<system-out><![CDATA[
+Given kullanici "editorUrl" anasayfaya gider................................passed
+And kullanici new butonuna basar............................................passed
+And first name kutusuna "Ramazan" yazar.....................................passed
+And last name kutusune "Can" yazar..........................................passed
+And position kutusuna "QA lead" yazar.......................................passed
+And office kutusuna "Ankara" yazar..........................................passed
+And extension kutusuna "Kizilay" yazar......................................passed
+Then start date kutusuna "2021-10-01" yazar.................................passed
+And salary kutusuna "25000" yazar...........................................passed
+And create butonuna basar...................................................passed
+Then kullanici "Ramazan" ile arama yapar....................................passed
+And isim bolumunde "Ramazan" oldugunu dogrular..............................passed
+Then 2 saniye bekler........................................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.5" time="5.398">
+<system-out><![CDATA[
+Given kullanici "editorUrl" anasayfaya gider................................passed
+And kullanici new butonuna basar............................................passed
+And first name kutusuna "Sule" yazar........................................passed
+And last name kutusune "Saglam" yazar.......................................passed
+And position kutusuna "Test lead" yazar.....................................passed
+And office kutusuna "Izmir" yazar...........................................passed
+And extension kutusuna "Konak" yazar........................................passed
+Then start date kutusuna "2022-02-02" yazar.................................passed
+And salary kutusuna "23000" yazar...........................................passed
+And create butonuna basar...................................................passed
+Then kullanici "Sule" ile arama yapar.......................................passed
+And isim bolumunde "Sule" oldugunu dogrular.................................passed
+Then 2 saniye bekler........................................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.6" time="5.299">
+<system-out><![CDATA[
+Given kullanici "editorUrl" anasayfaya gider................................passed
+And kullanici new butonuna basar............................................passed
+And first name kutusuna "Yasar" yazar.......................................passed
+And last name kutusune "U" yazar............................................passed
+And position kutusuna "QA" yazar............................................passed
+And office kutusuna "Istanbul" yazar........................................passed
+And extension kutusuna "Kadikoy" yazar......................................passed
+Then start date kutusuna "2023-01-01" yazar.................................passed
+And salary kutusuna "25000" yazar...........................................passed
+And create butonuna basar...................................................passed
+Then kullanici "Yasar" ile arama yapar......................................passed
+And isim bolumunde "Yasar" oldugunu dogrular................................passed
+Then 2 saniye bekler........................................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.7" time="5.329">
+<system-out><![CDATA[
+Given kullanici "editorUrl" anasayfaya gider................................passed
+And kullanici new butonuna basar............................................passed
+And first name kutusuna "Meryem" yazar......................................passed
+And last name kutusune "Toprak" yazar.......................................passed
+And position kutusuna "QA lead" yazar.......................................passed
+And office kutusuna "Istanbul" yazar........................................passed
+And extension kutusuna "levent" yazar.......................................passed
+Then start date kutusuna "2022-11-11" yazar.................................passed
+And salary kutusuna "20000" yazar...........................................passed
+And create butonuna basar...................................................passed
+Then kullanici "Meryem" ile arama yapar.....................................passed
+And isim bolumunde "Meryem" oldugunu dogrular...............................passed
+Then 2 saniye bekler........................................................passed
+And sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
