@@ -1,6 +1,5 @@
 
 Feature: US1010 Kullanici scenario otline ile editor sayfasinda kayit olusturur
-@p1
   Scenario Outline: TC15 Editor sayfasinda birden fazla kayit olusturabilmeli
 
    When kullanici "editorUrl" anasayfaya gider

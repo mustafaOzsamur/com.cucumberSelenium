@@ -1,13 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="11.709" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="web sayfasi icerisinde kodlarla sayfayi asagi ve yukari kaydirma testi" name="Kullanici web sayfasi icerisinde kodlarla sayfayi asagi ve yukari kaydirma yapabilmeli" time="11.528">
+<testsuite name="Cucumber" time="20.728" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US1018  Web sayfasinda siparis ve odeme tesi" name="TC23 Kullanici web sayfasindan siparis verebilmeli ve odeyebilmeli" time="20.536">
+<failure type="org.openqa.selenium.NoAlertPresentException" message="no such alert
+  (Session info: chrome=112.0.5615.138)
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [197c3c973f5e1e3c62aaf8a3d0e44588, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\musta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63164/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 197c3c973f5e1e3c62aaf8a3d0e44588">
+<![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=112.0.5615.138)
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [197c3c973f5e1e3c62aaf8a3d0e44588, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\musta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63164/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 197c3c973f5e1e3c62aaf8a3d0e44588
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1079)
+	at stepdefinitions.AutomationExerciseStepdefinitions.aciklama_metin_alanina_aciklamayi_girin_ve_place_order_tiklayin(AutomationExerciseStepdefinitions.java:160)
+	at ✽.aciklama metin alanina aciklamayi girin ve Place Order tiklayin(file:///C:/Users/musta/IdeaProjects/com.cucumberSelenium/src/test/resources/features/US1018_SiparisVeÖdemeTesti.feature:13)
+]]>
+</failure>
 <system-out><![CDATA[
 Given kullanici "automationUrl" anasayfaya gider............................passed
 Then Ana sayfanin basariyla gorundugunu dogrulalar..........................passed
-And Sayfayi asagiya dogru kaydirin..........................................passed
-Then ABONELİK in gorunur oldugunu dogrulayin................................passed
-And Sayfayi yukari kaydir...................................................passed
-Then Sayfanin yukari kaydirildigini ve Otomasyon Muhendisleri icin Tam Tesekkullu uygulama web sitesi metninin ekranda gorundugunu dogrulayin.passed
+And user sig in linkine tiklar..............................................passed
+And dogru email ve password girerek login butonuna tikla....................passed
+And sepete urun ekle........................................................passed
+And cart butonuna click yap.................................................passed
+Then cart sayfasinda urununun eklendigini dogrula...........................passed
+And proceed To Checkout click yap...........................................passed
+And adres ayrintilarini dogrula ve siparisi incele..........................passed
+Then aciklama metin alanina aciklamayi girin ve Place Order tiklayin........failed
+And odeme ayrintilarini girin...............................................skipped
+And pay and Confirm Order click yap.........................................skipped
+Then your order has been placed successfully! yazisinin gorundugunu dogrulayin.skipped
+And delete Account butonuna click yapin.....................................skipped
+And ACCOUNT DELETED yazisinin göründügünü dogrulayin........................skipped
+Then continue butonuna click yap............................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

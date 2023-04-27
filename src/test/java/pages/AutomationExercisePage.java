@@ -38,4 +38,50 @@ public class AutomationExercisePage {
 
    @FindBy(xpath = "(//h2[text()='Full-Fledged practice website for Automation Engineers'])[1]")
     public WebElement sayfaBasiYazielementi;
+
+   @FindBy(xpath = "//input[@data-qa='login-email']")
+    public WebElement loginEmailKutusu;
+
+   @FindBy(xpath = "//input[@data-qa='login-password']")
+    public WebElement loginPasswordKutusu;
+
+    @FindBy(xpath = "(//button[@class='btn btn-default'])[1]")
+    public WebElement loginButtonu;
+
+    @FindBy(xpath = "(//a[@data-product-id='1'])[1]")
+    public WebElement urunElementi;
+
+    @FindBy(xpath = "//u[text()='View Cart']")
+    public WebElement urunSepetiElementi;
+
+    @FindBy(xpath = "//a[text()='Blue Top']")
+    public WebElement sepeticindekiUrunElementi;
+
+    @FindBy(xpath = "//a[text()='Proceed To Checkout']")
+    public WebElement proceedToCheckoutButtonu;
+
+    @FindBy(xpath = "(//li[@class='address_firstname address_lastname'])[1]")
+    public WebElement adresBilgileriYaziElementi;
+
+    @FindBy(xpath = "//textarea[@name='message']")
+    public WebElement mesageElementi;
+
+    @FindBy(xpath = "//a[text()='Place Order']")
+    public WebElement placeOrderElementi;
+
+    @FindBy (xpath = "//input[@name='name_on_card']")
+    public WebElement cardNameElementi;
+
+    @FindBy(id = "submit")
+    public WebElement submitButtonElementi;
+
+    @FindBy(xpath = "(//div[@class='alert-success alert'])[1]")
+    public WebElement yourOrderHasBeenPlacedSuccessfullyYaziElementi;
+
+    @FindBy(xpath = "//iframe[@title='Advertisement']")
+    public WebElement iframeReklamElementi;
+
+    @FindBy(xpath = "//span[text()='Close']")
+    public WebElement closeReklamElementi;
+
 }

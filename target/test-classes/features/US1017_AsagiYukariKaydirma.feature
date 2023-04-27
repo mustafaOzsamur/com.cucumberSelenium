@@ -1,6 +1,6 @@
 Feature: web sayfasi icerisinde kodlarla sayfayi asagi ve yukari kaydirma testi
-  @wip
-  Scenario: Kullanici web sayfasi icerisinde kodlarla sayfayi asagi ve yukari kaydirma yapabilmeli
+
+  Scenario: TC22 Kullanici web sayfasi icerisinde kodlarla sayfayi asagi ve yukari kaydirma yapabilmeli
     Given kullanici "automationUrl" anasayfaya gider
     Then Ana sayfanin basariyla gorundugunu dogrulalar
     And  Sayfayi asagiya dogru kaydirin

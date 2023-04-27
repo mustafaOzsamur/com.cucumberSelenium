@@ -5,11 +5,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 import pages.AutomationExercisePage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 import static utilities.Driver.driver;
@@ -113,7 +116,86 @@ public class AutomationExerciseStepdefinitions {
     public void sayfanin_yukari_kaydirildigini_ve_otomasyon_muhendisleri_icin_tam_tesekkullu_uygulama_web_sitesi_metninin_ekranda_gorundugunu_dogrulayin() {
 
         Assert.assertTrue(automationExercisePage.sayfaBasiYazielementi.isDisplayed());
+
+
     }
+    @Then("dogru email ve password girerek login butonuna tikla")
+    public void dogru_email_ve_password_girerek_login_butonuna_tikla() {
+        automationExercisePage.loginEmailKutusu.sendKeys(ConfigReader.getProperty("automationGecerliEmail"));
+        automationExercisePage.loginPasswordKutusu.sendKeys(ConfigReader.getProperty("automationGecerliPassword"));
+        automationExercisePage.loginButtonu.click();
+    }
+    @Then("sepete urun ekle")
+    public void sepete_urun_ekle() {
+    actions.moveToElement(automationExercisePage.urunElementi).perform();
+    automationExercisePage.urunElementi.click();
+    }
+    @Then("cart butonuna click yap")
+    public void cart_butonuna_click_yap() {
+    automationExercisePage.urunSepetiElementi.click();
+    }
+    @Then("cart sayfasinda urununun eklendigini dogrula")
+    public void cart_sayfasinda_urununun_eklendigini_dogrula() {
+    Assert.assertTrue(automationExercisePage.sepeticindekiUrunElementi.isDisplayed());
+    }
+    @Then("proceed To Checkout click yap")
+    public void proceed_to_checkout_click_yap() {
+    automationExercisePage.proceedToCheckoutButtonu.click();
+    }
+    @Then("adres ayrintilarini dogrula ve siparisi incele")
+    public void adres_ayrintilarini_dogrula_ve_siparisi_incele() {
+
+        Assert.assertTrue(automationExercisePage.adresBilgileriYaziElementi.getText().contains("mustafa"));
+    }
+    @Then("aciklama metin alanina aciklamayi girin ve Place Order tiklayin")
+    public void aciklama_metin_alanina_aciklamayi_girin_ve_place_order_tiklayin() {
+        actions.moveToElement(automationExercisePage.mesageElementi).perform();
+    automationExercisePage.mesageElementi.sendKeys("Lütfen hizli olsun");
+    automationExercisePage.placeOrderElementi.click();
+
+      //  WebElement element = Driver.getDriver().findElement(By.xpath("//span[text()='Close']"));
+      //  JavascriptExecutor executor = (JavascriptExecutor)Driver.getDriver();
+      //  executor.executeScript("arguments[0].click();", element);
+
+        Driver.getDriver().switchTo().alert().dismiss();
+
+    }
+    @Then("odeme ayrintilarini girin")
+    public void odeme_ayrintilarini_girin() {
+        actions.click(automationExercisePage.cardNameElementi).sendKeys("mustafa yilmaz")
+                .sendKeys(Keys.TAB)
+                .sendKeys("8568658685875")
+                .sendKeys(Keys.TAB)
+                .sendKeys("456")
+                .sendKeys(Keys.TAB)
+                .sendKeys("11")
+                .sendKeys(Keys.TAB)
+                .sendKeys("2023").perform();
+
+
+    }
+    @Then("pay and Confirm Order click yap")
+    public void pay_and_confirm_order_click_yap() {
+
+        automationExercisePage.submitButtonElementi.click();
+    }
+    @Then("your order has been placed successfully! yazisinin gorundugunu dogrulayin")
+    public void your_order_has_been_placed_successfully_yazisinin_gorundugunu_dogrulayin() {
+    Assert.assertTrue(automationExercisePage.yourOrderHasBeenPlacedSuccessfullyYaziElementi.isDisplayed());
+    }
+    @Then("delete Account butonuna click yapin")
+    public void delete_account_butonuna_click_yapin() {
+
+    }
+    @Then("ACCOUNT DELETED yazisinin göründügünü dogrulayin")
+    public void account_deleted_yazisinin_göründügünü_dogrulayin() {
+
+    }
+    @Then("continue butonuna click yap")
+    public void continue_butonuna_click_yap() {
+
+    }
+
 
 
 }
