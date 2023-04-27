@@ -22,3 +22,4 @@ Feature: US1009 yanlis kullanici adi ve password listesi ile negatif login testi
       | yasar          | yasar@c.com    |
       | adem           | adem@d.com     |
       | ozgur          | ozgur@e.com    |
+      | ahmet          | ahmet@e.com    |

@@ -1,129 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="40.24" tests="7" skipped="0" failures="0" errors="0">
-<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.1" time="8.086">
+<testsuite name="Cucumber" time="70.273" tests="14" skipped="0" failures="0" errors="0">
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.1" time="9.656">
 <system-out><![CDATA[
-Given kullanici "editorUrl" anasayfaya gider................................passed
-And kullanici new butonuna basar............................................passed
-And first name kutusuna "ilker" yazar.......................................passed
-And last name kutusune "Bulut" yazar........................................passed
-And position kutusuna "QA" yazar............................................passed
-And office kutusuna "Istanbul" yazar........................................passed
-And extension kutusuna "Levennt" yazar......................................passed
-Then start date kutusuna "2021-01-01" yazar.................................passed
-And salary kutusuna "20000" yazar...........................................passed
-And create butonuna basar...................................................passed
-Then kullanici "ilker" ile arama yapar......................................passed
-And isim bolumunde "ilker" oldugunu dogrular................................passed
-Then 2 saniye bekler........................................................passed
-And sayfayi kapatir.........................................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "mehmet" girer...........................................passed
+And password kutusuna "mehmet@a.com" girer..................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.2" time="5.217">
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.2" time="4.652">
 <system-out><![CDATA[
-Given kullanici "editorUrl" anasayfaya gider................................passed
-And kullanici new butonuna basar............................................passed
-And first name kutusuna "Ahmet" yazar.......................................passed
-And last name kutusune "Yilmaz" yazar.......................................passed
-And position kutusuna "Developer" yazar.....................................passed
-And office kutusuna "Ankara" yazar..........................................passed
-And extension kutusuna "Cukur" yazar........................................passed
-Then start date kutusuna "2022-02-05" yazar.................................passed
-And salary kutusuna "40000" yazar...........................................passed
-And create butonuna basar...................................................passed
-Then kullanici "Ahmet" ile arama yapar......................................passed
-And isim bolumunde "Ahmet" oldugunu dogrular................................passed
-Then 2 saniye bekler........................................................passed
-And sayfayi kapatir.........................................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "ahmet" girer............................................passed
+And password kutusuna "ahmet@b.com" girer...................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.3" time="5.253">
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.3" time="4.562">
 <system-out><![CDATA[
-Given kullanici "editorUrl" anasayfaya gider................................passed
-And kullanici new butonuna basar............................................passed
-And first name kutusuna "Hakan" yazar.......................................passed
-And last name kutusune "Uyanik" yazar.......................................passed
-And position kutusuna "Tester" yazar........................................passed
-And office kutusuna "Izmir" yazar...........................................passed
-And extension kutusuna "Karsi" yazar........................................passed
-Then start date kutusuna "2020-05-02" yazar.................................passed
-And salary kutusuna "50000" yazar...........................................passed
-And create butonuna basar...................................................passed
-Then kullanici "Hakan" ile arama yapar......................................passed
-And isim bolumunde "Hakan" oldugunu dogrular................................passed
-Then 2 saniye bekler........................................................passed
-And sayfayi kapatir.........................................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "yusuf" girer............................................passed
+And password kutusuna "yusuf@c.com" girer...................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.4" time="5.368">
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.4" time="4.502">
 <system-out><![CDATA[
-Given kullanici "editorUrl" anasayfaya gider................................passed
-And kullanici new butonuna basar............................................passed
-And first name kutusuna "Ramazan" yazar.....................................passed
-And last name kutusune "Can" yazar..........................................passed
-And position kutusuna "QA lead" yazar.......................................passed
-And office kutusuna "Ankara" yazar..........................................passed
-And extension kutusuna "Kizilay" yazar......................................passed
-Then start date kutusuna "2021-10-01" yazar.................................passed
-And salary kutusuna "25000" yazar...........................................passed
-And create butonuna basar...................................................passed
-Then kullanici "Ramazan" ile arama yapar....................................passed
-And isim bolumunde "Ramazan" oldugunu dogrular..............................passed
-Then 2 saniye bekler........................................................passed
-And sayfayi kapatir.........................................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "hasan" girer............................................passed
+And password kutusuna "hasan@h.com" girer...................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.5" time="5.398">
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.5" time="4.52">
 <system-out><![CDATA[
-Given kullanici "editorUrl" anasayfaya gider................................passed
-And kullanici new butonuna basar............................................passed
-And first name kutusuna "Sule" yazar........................................passed
-And last name kutusune "Saglam" yazar.......................................passed
-And position kutusuna "Test lead" yazar.....................................passed
-And office kutusuna "Izmir" yazar...........................................passed
-And extension kutusuna "Konak" yazar........................................passed
-Then start date kutusuna "2022-02-02" yazar.................................passed
-And salary kutusuna "23000" yazar...........................................passed
-And create butonuna basar...................................................passed
-Then kullanici "Sule" ile arama yapar.......................................passed
-And isim bolumunde "Sule" oldugunu dogrular.................................passed
-Then 2 saniye bekler........................................................passed
-And sayfayi kapatir.........................................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "ali" girer..............................................passed
+And password kutusuna "ali@a.com" girer.....................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.6" time="5.299">
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.6" time="4.542">
 <system-out><![CDATA[
-Given kullanici "editorUrl" anasayfaya gider................................passed
-And kullanici new butonuna basar............................................passed
-And first name kutusuna "Yasar" yazar.......................................passed
-And last name kutusune "U" yazar............................................passed
-And position kutusuna "QA" yazar............................................passed
-And office kutusuna "Istanbul" yazar........................................passed
-And extension kutusuna "Kadikoy" yazar......................................passed
-Then start date kutusuna "2023-01-01" yazar.................................passed
-And salary kutusuna "25000" yazar...........................................passed
-And create butonuna basar...................................................passed
-Then kullanici "Yasar" ile arama yapar......................................passed
-And isim bolumunde "Yasar" oldugunu dogrular................................passed
-Then 2 saniye bekler........................................................passed
-And sayfayi kapatir.........................................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "cafer" girer............................................passed
+And password kutusuna "cafer@c.com" girer...................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1019 kayit olusturma ve listeye ekleme testi" name="TC24 Kullanici web sayfasinda kayit olusturabilmeli - Example #1.7" time="5.329">
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.7" time="4.427">
 <system-out><![CDATA[
-Given kullanici "editorUrl" anasayfaya gider................................passed
-And kullanici new butonuna basar............................................passed
-And first name kutusuna "Meryem" yazar......................................passed
-And last name kutusune "Toprak" yazar.......................................passed
-And position kutusuna "QA lead" yazar.......................................passed
-And office kutusuna "Istanbul" yazar........................................passed
-And extension kutusuna "levent" yazar.......................................passed
-Then start date kutusuna "2022-11-11" yazar.................................passed
-And salary kutusuna "20000" yazar...........................................passed
-And create butonuna basar...................................................passed
-Then kullanici "Meryem" ile arama yapar.....................................passed
-And isim bolumunde "Meryem" oldugunu dogrular...............................passed
-Then 2 saniye bekler........................................................passed
-And sayfayi kapatir.........................................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "huseyin" girer..........................................passed
+And password kutusuna "huseyin@h.com" girer.................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.8" time="4.644">
+<system-out><![CDATA[
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "mehmet" girer...........................................passed
+And password kutusuna "mehmet@a.com" girer..................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.9" time="4.71">
+<system-out><![CDATA[
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "ahmet" girer............................................passed
+And password kutusuna "ahmet@b.com" girer...................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.10" time="4.767">
+<system-out><![CDATA[
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "yusuf" girer............................................passed
+And password kutusuna "yusuf@c.com" girer...................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.11" time="4.942">
+<system-out><![CDATA[
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "hasan" girer............................................passed
+And password kutusuna "hasan@h.com" girer...................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.12" time="4.672">
+<system-out><![CDATA[
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "ali" girer..............................................passed
+And password kutusuna "ali@a.com" girer.....................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.13" time="4.69">
+<system-out><![CDATA[
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "cafer" girer............................................passed
+And password kutusuna "cafer@c.com" girer...................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1020 web sayfasinda basarisiz login testi" name="TC25 Kullanici yanlis Email ve Password ile giris yapamamali - Example #1.14" time="4.671">
+<system-out><![CDATA[
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then kullanici logIn butonuna tiklar........................................passed
+And email kutusuna "huseyin" girer..........................................passed
+And password kutusuna "huseyin@h.com" girer.................................passed
+And login butonuna click yaparr.............................................passed
+And basarili giris yapilmadigini test eeder.................................passed
+Then sayfayi kapatir........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

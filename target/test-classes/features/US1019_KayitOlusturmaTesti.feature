@@ -1,5 +1,5 @@
 Feature: US1019 kayit olusturma ve listeye ekleme testi
-  @wip
+
   Scenario Outline: TC24 Kullanici web sayfasinda kayit olusturabilmeli
     Given kullanici "editorUrl" anasayfaya gider
     And kullanici new butonuna basar
@@ -22,7 +22,7 @@ Feature: US1019 kayit olusturma ve listeye ekleme testi
       | Hakan     | Uyanik   | Tester    | Izmir    | Karsi     | 2020-05-02 | 50000  |
       | Ramazan   | Can      | QA lead   | Ankara   | Kizilay   | 2021-10-01 | 25000  |
       | Sule      | Saglam   | Test lead | Izmir    | Konak     | 2022-02-02 | 23000  |
-      | Yasar     | U        | QA        | Istanbul | Kadikoy   | 2023-01-01 | 25000  |
+      | Yasar     | Ulas     | QA        | Istanbul | Kadikoy   | 2023-01-01 | 25000  |
       | Meryem    | Toprak   | QA lead   | Istanbul | levent    | 2022-11-11 | 20000  |
 
 
