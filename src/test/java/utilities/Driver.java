@@ -3,6 +3,7 @@ package utilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 
 
@@ -25,7 +26,7 @@ public class Driver {
     }
 
     public static WebDriver driver;
-
+    public static Actions actions;
 
     public static WebDriver getDriver() {
 

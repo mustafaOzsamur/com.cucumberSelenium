@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="14.613" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1021 homepage logo test on novodaily website" name="TC26 The user should be able to return to the homepage when clicking on the NOVODAILY logo" time="14.424">
+<testsuite name="Cucumber" time="13.76" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US1023 nodaily.com sitesinde bulunan &quot;produkte&quot; linki altindaki urun sayisi testi" name="TC28 Kullanici produkte linki altindaki ve kategoriler altindaki ürün toplam sayilarini test edebilmeli" time="13.39">
+<failure type="java.lang.AssertionError" message="expected:&lt;18&gt; but was:&lt;13&gt;">
+<![CDATA[java.lang.AssertionError: expected:<18> but was:<13>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepdefinitions.NovoDailyStepdefinitions.bu_sayfada_bulunan_urun_sayisini_alir_ve_diger_alinan_urun_sayilarinin_toplami_ile_ayni_oldugunu_dogrular(NovoDailyStepdefinitions.java:96)
+	at ✽.bu sayfada bulunan urun sayisini alir ve diger alinan urun sayilarinin toplami ile ayni oldugunu dogrular(file:///C:/Users/musta/IdeaProjects/com.cucumberSelenium/src/test/resources/features/US1023_NovoDailyUrunTesti.feature:13)
+]]>
+</failure>
 <system-out><![CDATA[
-Given Go to the "ndUrl" NovoDaily website...................................passed
-Then wait for the homepage to load for 5 seconds............................passed
-And Click on the "NOVODAILY" font logo......................................passed
-And Verify that the NovoDaily logo is displayed on the homepage.............passed
-Then close the browser......................................................passed
+Given kullanici "ndUrl" anasayfaya gider....................................passed
+And mausu produkte linkinin uzerinde bekletir...............................passed
+And cookies kabul eder......................................................passed
+And produkta altinda acilan genanalsyen linkine tiklar ve burda bulunan urun sayisini alir.passed
+And blutanalsyen linkine tiklar buradaki urunlerin sayisini alir............passed
+And nahrungerganzungsmittel linkine tiklar ve urun sayisini alir............passed
+And bundles sayfasindaki urun sayisini alir.................................passed
+And abos sayfasindaki urun sayisini alir....................................passed
+And produkte linkine tiklar "Alle produkte" yazisinin görünür oldugunu dogrular.passed
+And bu sayfada bulunan urun sayisini alir ve diger alinan urun sayilarinin toplami ile ayni oldugunu dogrular.failed
+Then sayfayi kapatir........................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

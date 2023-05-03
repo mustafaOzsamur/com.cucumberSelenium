@@ -1,5 +1,5 @@
 Feature: US1021 homepage logo test on novodaily website
-  @wip
+
   Scenario: TC26 The user should be able to return to the homepage when clicking on the NOVODAILY logo
 
     Given Go to the "ndUrl" NovoDaily website.
